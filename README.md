@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bruce Bainomugisha — AI Data Annotator Portfolio
+
+A professional portfolio website showcasing AI data annotation expertise, projects, certifications, and tools. Built with Next.js 15 (App Router) and deployed on Vercel.
+
+**Live site:** _[add your Vercel URL after deployment]_
+
+---
+
+## Overview
+
+This site presents Bruce Bainomugisha's work as an AI Data Annotator and AI Output Evaluator, covering five annotation domains: NLP, Computer Vision, Geospatial, Audio & Speech, and AI Output Evaluation.
+
+### Pages
+
+| Route | Description |
+|---|---|
+| `/` | Hero, skills snapshot, featured projects, certifications, tools |
+| `/about` | Professional background, work philosophy, resume download |
+| `/projects` | NER Corpus Pipeline & Instance Segmentation Pipeline (with screenshots & GitHub links) |
+| `/expertise` | Full breakdown of annotation skills across all five domains |
+| `/evaluation` | AI output evaluation methodology and approach |
+| `/certifications` | Google Advanced Data Analytics & DataLens Africa credentials |
+| `/tools` | Annotation tools and technologies proficiency |
+| `/contact` | Contact form and availability |
+
+---
+
+## Projects Featured
+
+### 1. NER Corpus Annotation Pipeline
+End-to-end NLP annotation pipeline — spaCy pre-annotation + Label Studio human review.
+- **47,959** token rows across PER, ORG, LOC, MISC entity types
+- Exported in JSON and CoNLL-2003 format
+- 👉 [GitHub Repository](https://github.com/Bruce350-ship-it/ner-project)
+
+### 2. Instance Segmentation Pre-Annotation Pipeline
+Zero-shot YOLOv8 inference pipeline for CVAT task acceleration.
+- 80 MS-COCO classes, COCO JSON output for seamless CVAT import
+- Reduces annotation time by pre-populating bounding boxes
+- 👉 [GitHub Repository](https://github.com/Bruce350-ship-it/instance-segmentation-project)
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router, Static Export)
+- **Language:** TypeScript
+- **Styling:** CSS Modules + CSS custom properties (no Tailwind)
+- **Typography:** Inter — Google Fonts
+- **Images:** `next/image` with local assets in `public/screenshots/`
+- **Deployment:** Vercel
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+portfolio-site/
+├── app/
+│   ├── page.tsx              # Homepage
+│   ├── about/                # About Me
+│   ├── projects/             # Projects
+│   ├── expertise/            # Expertise
+│   ├── evaluation/           # AI Evaluation
+│   ├── certifications/       # Certifications
+│   ├── tools/                # Tools
+│   ├── contact/              # Contact
+│   ├── globals.css           # Design tokens & global styles
+│   └── layout.tsx            # Root layout (Navbar + Footer)
+├── components/               # Reusable UI components
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   ├── SkillCard.tsx
+│   ├── CTAButton.tsx
+│   ├── BadgeTag.tsx
+│   └── CertificationCard.tsx
+└── public/
+    ├── Bruce Resume.pdf
+    └── screenshots/          # Project & profile images
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Certifications
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Google Advanced Data Analytics Professional Certificate** — Coursera · Google (2026) · [View Credential](https://www.credly.com/earner/earned/badge/666e6f0c-eb55-4da1-af5a-86f4a6db9ead)
+- **Essentials of Data Labeling & Annotation for AI Development** — DataLens Africa (2026)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Deployment
+
+This site is deployed on [Vercel](https://vercel.com). To deploy your own fork:
+
+1. Push to GitHub
+2. Import the repository into Vercel
+3. Vercel auto-detects Next.js — no configuration needed
+4. A production URL is assigned on first deploy

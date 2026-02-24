@@ -1,0 +1,45 @@
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: var(--neutral-bg);
+    padding: 80px 24px 64px;
+    border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+    margin-top: 12px;
+}
+
+.subtitle {
+    margin-top: 16px;
+    font-size: 1.05rem;
+    color: var(--mid);
+    max-width: 640px;
+    line-height: 1.75;
+}
+
+.certList {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.whySection {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.whySection h2 {
+    margin-bottom: 8px;
+}
+
+.whySection p {
+    font-size: 0.95rem;
+    color: var(--mid);
+    line-height: 1.8;
+}

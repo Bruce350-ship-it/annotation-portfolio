@@ -1,0 +1,132 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.logoName {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--black);
+    letter-spacing: -0.01em;
+}
+
+.logoDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+}
+
+.link {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--mid);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition), background var(--transition);
+}
+
+.link:hover {
+    color: var(--black);
+    background: var(--neutral-bg);
+}
+
+.active {
+    color: var(--accent) !important;
+    font-weight: 600;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--black);
+    border-radius: 2px;
+    transition: transform var(--transition), opacity var(--transition);
+}
+
+.barOpen1 {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.barOpen2 {
+    opacity: 0;
+}
+
+.barOpen3 {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 820px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .links {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 24px 24px;
+        border-bottom: 1px solid var(--border);
+        gap: 2px;
+        transform: translateY(-110%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.28s ease, opacity 0.28s ease;
+        box-shadow: var(--shadow-md);
+    }
+
+    .linksOpen {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .link {
+        font-size: 1rem;
+        padding: 10px 14px;
+    }
+}
