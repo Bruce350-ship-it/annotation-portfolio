@@ -29,7 +29,7 @@ const certs = [
         title: "Essentials of Data Labeling & Annotation",
         issuer: "DataLens Africa",
         date: "2026",
-        link: undefined, // placeholder — add URL when available
+        link: "/Essentials%20of%20Data%20Labeling%20&%20Annotation%20for%20AI%20Development.pdf",
         learned: [
             "Core annotation types — text, image, audio, video, and geospatial labeling",
             "Annotation quality control — gold sets, peer review, consensus methods",

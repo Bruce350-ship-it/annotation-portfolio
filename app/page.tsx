@@ -186,14 +186,18 @@ export default function HomePage() {
             <div className={styles.certBadge}>
               <span className={styles.certIcon}>🎓</span>
               <div>
-                <strong>Google Advanced Data Analytics</strong>
+                <a href="https://www.credly.com/earner/earned/badge/666e6f0c-eb55-4da1-af5a-86f4a6db9ead" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <strong>Google Advanced Data Analytics ↗</strong>
+                </a>
                 <p>Professional Certificate · Coursera</p>
               </div>
             </div>
             <div className={styles.certBadge}>
               <span className={styles.certIcon}>📜</span>
               <div>
-                <strong>Essentials of Data Labeling & Annotation</strong>
+                <a href="/Essentials%20of%20Data%20Labeling%20&%20Annotation%20for%20AI%20Development.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <strong>Essentials of Data Labeling & Annotation ↗</strong>
+                </a>
                 <p>DataLens Africa</p>
               </div>
             </div>
